@@ -1,0 +1,12 @@
+[Unit]  
+Description=Batman-adv mesh setup
+After=NetworkManager.service  
+Wants=NetworkManager.service 
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/batman-start.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
